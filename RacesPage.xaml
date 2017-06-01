@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Spokesman.RacesPage" Title="Phat Wednesday 2016" >
+    
+	<StackLayout>
+        <SearchBar Placeholder="Search..." PlaceholderColor="Green" TextChanged="Handle_TextChanged" />
+        <ListView
+            x:Name="raceList"
+            SeparatorColor="Black"
+            HasUnevenRows="false"
+            ItemSelected="Handle_ItemSelected"
+            Refreshing="Handle_Refreshing"
+            RowHeight="60">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="5" >
+                            <Image Source="Canada" />
+                            <Label Text="{Binding imgSrc}" />
+                            <StackLayout HorizontalOptions="StartAndExpand" >
+                                <Label Text="{Binding name}" /> 
+                                <Label Text="{Binding country}" /> 
+                            </StackLayout>
+                            <Button Text="More" />
+                        </StackLayout> 
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
