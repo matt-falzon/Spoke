@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Spokesman.LoginPage">
-	<Button HorizontalOptions="Center" VerticalOptions="Center" Text="Login" Clicked="Handle_Clicked" />
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:viewModels="clr-namespace:FacebookLogin.ViewModels;assembly=FacebookLogin"
+    x:Class="Spokesman.LoginPage">
+  <StackLayout Orientation = "Vertical" Padding="0,80,0,0" >
+    <Label Text="Login with Facebook"
+           FontSize="60"
+           TextColor="Black"/>
+    <StackLayout Padding="0,100,0,0">
+        <Button Text = "Login with Facebook"
+            TextColor="White" 
+            BackgroundColor="#01579B"
+            Font="Bold"
+            FontSize="26"
+            Clicked="Handle_Clicked" />
+    </StackLayout>
+  </StackLayout>
 </ContentPage>

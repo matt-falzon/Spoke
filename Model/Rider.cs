@@ -10,7 +10,7 @@ namespace Spokesman.Model
         public string imageUrl { get; set; }
         public int age { get; set; }
         public string sex { get; set; }
-        public ImageSource imgSrc { get; set; }
+        public string countryImg { get { return "flag/" + country; }}
 
         public Rider(string ID, string name, string country, string imageUrl, int age, string sex)
         {
@@ -20,7 +20,6 @@ namespace Spokesman.Model
             this.imageUrl = imageUrl;
             this.age = age;
             this.sex = sex;
-            //imgSrc = GetImageUriSource(country, 60);
         }
 
         public ImageSource GetImageUriSource(string strUrl, double cacheDurationMinutes)

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Spokesman.HomePage"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions">
+    <RelativeLayout>
+        <BoxView Color="#DEDEDE" x:Name="banner" 
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}" 
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.2}"
+            /> 
+
+            <controls:CircleImage
+            x:Name="circleImage" 
+            Aspect="AspectFit" 
+            BorderColor="White" 
+            BorderThickness="5" 
+            Source="icon_wheel.gif"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.035}"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=banner, Property=Width, Factor=0.35}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}">
+        </controls:CircleImage>
+
+        <Label x:Name="nameLabel" FontSize="15" FontAttributes="Bold" TextColor="Black" Text="Name" HorizontalOptions="Center"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=banner, Property=Y, Factor=1.15}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        <Label x:Name="bikeLabel" FontSize="10" FontAttributes="Bold" TextColor="#666666" Text="GIANT / SPECIALIZED" HorizontalOptions="Center" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=banner, Property=Y, Factor=1.3}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+
+        <Image x:Name="btnMenu" Source="arrow_button.png"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=banner, Property=Y, Factor=1.1}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=banner, Property=Width, Factor=0.85}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.1}"/>
+
+        <Label x:Name="raceSeriesLabel" FontSize="10" FontAttributes="Bold" TextColor="#666666" Text="PHAT WEDNESDAY 2017" HorizontalOptions="Center" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=bikeLabel, Property=Y, Factor=1.3}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" />
+        <Label x:Name="raceSeriesRunLabel" FontSize="18" FontAttributes="Bold" TextColor="Black" Text="Race 1: B-Line" HorizontalOptions="Center" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=raceSeriesLabel, Property=Y, Factor=1.08}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" />
+        <Grid x:Name="gridPlacement"  Padding="20, 0, 20, 0"
+                    RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=raceSeriesRunLabel, Property=Y, Factor=1.15}"
+                    RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+                <ColumnDefinition Width="0.25*" />
+            </Grid.ColumnDefinitions>
+                <Label Text="POSITION" FontSize="10" TextColor="Black" Grid.Column="0" Grid.Row="0" />
+                <Label Text="TIME" FontSize="10" TextColor="Black" Grid.Column="1" Grid.Row="0" />
+                <Label Text="GAP" FontSize="10" TextColor="Black" Grid.Column="2" Grid.Row="0" />
+                <Label Text="POINTS" FontSize="10" TextColor="Black" Grid.Column="3" Grid.Row="0" />
+            
+                <Label Text="34" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" />
+                <Label Text="3:45.618" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
+                <Label Text="+16.196" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="2" Grid.Row="1" />
+                <Label Text="47pts" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="3" Grid.Row="1" />
+            </Grid>
+        
+        <BoxView x:Name="divider1" HeightRequest="1" Color="#888888" 
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=gridPlacement, Property=Y, Factor=1.2}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        
+        <Label  FontSize="10"  TextColor="#888888" Text="GROUPS" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider1, Property=Y, Factor=1.05}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                />
+        <Label  x:Name="labelGroups" FontSize="16"  TextColor="Black" Text="MyFriends" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider1, Property=Y, Factor=1.1}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+                />
+        <Grid x:Name="gridFriends"  Padding="20, 0, 20, 0"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider1, Property=Y, Factor=1.2}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+            </Grid.ColumnDefinitions>
+                <Label Text="WINNER" FontSize="10" TextColor="Black" Grid.Column="0" Grid.Row="0" />
+                <Label Text="WINNERS TIME" FontSize="10" TextColor="Black" Grid.Column="1" Grid.Row="0" />
+                <Label Text="GAP" FontSize="10" TextColor="Black" Grid.Column="2" Grid.Row="0" />
+            
+                <Label Text="Stephan Koch" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" />
+                <Label Text="3:45.618" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
+                <Label Text="+16.196" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+
+        <BoxView x:Name="divider2" HeightRequest="1" Color="#888888" 
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=gridFriends, Property=Y, Factor=1.15}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+        
+        <Label  FontSize="10"  TextColor="#888888" Text="GROUPS" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider2, Property=Y, Factor=1.05}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                />
+        <Label  x:Name="labelBikes" FontSize="16"  TextColor="Black" Text="Giant Bikes" 
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider2, Property=Y, Factor=1.08}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}" 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+                />
+        
+        <Grid x:Name="gridBikes"  Padding="20, 0, 20, 0"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=divider2, Property=Y, Factor=1.15}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*" />
+                <RowDefinition Height="0.5*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+                <ColumnDefinition Width="0.33*" />
+            </Grid.ColumnDefinitions>
+                <Label Text="WINNER" FontSize="10" TextColor="Black" Grid.Column="0" Grid.Row="0" />
+                <Label Text="WINNERS TIME" FontSize="10" TextColor="Black" Grid.Column="1" Grid.Row="0" />
+                <Label Text="GAP(YOU)" FontSize="10" TextColor="Black" Grid.Column="2" Grid.Row="0" />
+            
+                <Label Text="YOU!" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="0" Grid.Row="1" />
+                <Label Text="3:45.618" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="1" Grid.Row="1" />
+                <Label Text="+0.000" FontSize="11" TextColor="Black" FontAttributes="Bold" Grid.Column="2" Grid.Row="1" />
+            </Grid>
+        
+    </RelativeLayout>
+
+</ContentPage>

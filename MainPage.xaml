@@ -3,10 +3,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Spokesman.MainPage"
     xmlns:local="clr-namespace:Spokesman">
+    <local:HomePage Title="Home" Icon="icon_wheel.gif"/>
+    <local:ResultsPage Title="Results" Icon="icon_wheel.gif"/>
+    <local:GroupsPage Title="Groups" Icon="icon_wheel.gif"/>
+    <local:NotificationsPage Title="Notification" Icon="icon_wheel.gif"/>
     <NavigationPage Title="Races" Icon="icon_wheel.gif" >
         <x:Arguments>
-            <local:RacesPage  />
+            <local:RacesPage />
         </x:Arguments>
     </NavigationPage>
     <local:InfoPage Title="Aboot" Icon="icon_wheel.gif" />
+
 </TabbedPage>

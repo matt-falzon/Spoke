@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Spokesman.Model;
+using FFImageLoading.Forms;
 
 using Xamarin.Forms;
 
@@ -19,8 +20,6 @@ namespace Spokesman
             _riders = new ObservableCollection<Rider>();
 
             initializeList();
-
-
 
 
         }
@@ -46,7 +45,7 @@ namespace Spokesman
         private void initializeList()
         {
 			Rider[] dummyData =
-{
+            {
 				new Rider("00001", "Jamie Carson", "Scotland", "imageurl", 22, "male"),
 				new Rider("00002", "Stefan Koch", "Germany", "imageurl", 38, "male"),
 				new Rider("00003", "Matt Falzon", "Australia", "imageurl", 26, "male"),
@@ -63,9 +62,11 @@ namespace Spokesman
 			raceList.ItemsSource = _riders;
         }
 
-        async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+
+
+        async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
-            var rider = e.SelectedItem as Rider;
+			var rider = e.Item as Rider;
 
             await Navigation.PushAsync(new RiderDetailPage(rider));
         }
