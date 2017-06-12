@@ -15,6 +15,18 @@ namespace Spokesman
 
             InitializeComponent();
 
+			var tapGestureRecognizer = new TapGestureRecognizer();
+			tapGestureRecognizer.Tapped += (s, e) =>
+			{
+				navigate();
+			};
+			btnLogin.GestureRecognizers.Add(tapGestureRecognizer);
+
+            async void navigate()
+            {
+                await Navigation.PushModalAsync(new FacebookProfilePage());
+            }
+
         }
 
 

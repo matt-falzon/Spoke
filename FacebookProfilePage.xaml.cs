@@ -44,6 +44,7 @@ namespace Spokesman
 				Content = webView;
             //}
 
+            //Login();
 
 		}
 
@@ -59,7 +60,8 @@ namespace Spokesman
                 setActivityIndicatorView();
 				await vm.SetFacebookUserProfileAsync(accessToken);
 
-				Content = MainStackLayout;
+				//Content = MainStackLayout;
+                await Navigation.PushModalAsync(new MainPage());
 			}
 		}
 
@@ -93,6 +95,14 @@ namespace Spokesman
             _fbProfile = appData.Profile;
 
             await Navigation.PushModalAsync(new MainPage());
+        }
+
+        async void Login()
+        {
+			var appData = Application.Current as App;
+			_fbProfile = appData.Profile;
+
+			await Navigation.PushModalAsync(new MainPage());
         }
 
         void setActivityIndicatorView()

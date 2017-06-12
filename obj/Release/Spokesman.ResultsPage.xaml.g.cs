@@ -33,7 +33,7 @@ namespace Spokesman {
         private global::Xamarin.Forms.CarouselView leagueCarousel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.CarouselView mainCarousel;
+        private global::Xamarin.Forms.StackLayout carouselLayout;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
@@ -44,7 +44,7 @@ namespace Spokesman {
             SortByBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.BoxView>(this, "SortByBox");
             SortByLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "SortByLabel");
             leagueCarousel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.CarouselView>(this, "leagueCarousel");
-            mainCarousel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.CarouselView>(this, "mainCarousel");
+            carouselLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.StackLayout>(this, "carouselLayout");
         }
     }
 }

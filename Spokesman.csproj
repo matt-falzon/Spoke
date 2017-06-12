@@ -111,6 +111,7 @@
     <Compile Include="ResultsListView.xaml.cs">
       <DependentUpon>ResultsListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CarouselView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FFImageLoading">

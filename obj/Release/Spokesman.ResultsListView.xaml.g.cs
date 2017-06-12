@@ -12,7 +12,7 @@ namespace Spokesman {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/matt/Projects/Spokesman/Spokesman/ResultsListView.xaml")]
-    public partial class ResultsListView : global::Xamarin.Forms.StackLayout {
+    public partial class ResultsListView : global::Xamarin.Forms.ContentView {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.ListView raceList;
