@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,15 +9,23 @@ namespace Spokesman
 {
     public partial class ResultsPage : ContentPage
     {
-		private ObservableCollection<Rider> _riders;
+        public ObservableCollection<Rider> _riders { get; set; } 
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
 
         public ResultsPage()
         {
+            BindingContext = _riders;
+
             InitializeComponent();
 
 			_riders = new ObservableCollection<Rider>();
 
-			initializeList();
+			//initializeList();
+
 
             var seriesList = new List<String> { "Phat Wednesday 2016", "Phat Wednesday 2017" };
 
@@ -50,53 +58,17 @@ namespace Spokesman
             };
 
             mainCarousel.ItemsSource = names;
+
             leagueCarousel.ItemsSource = leagues;
 
         }
 
-		IEnumerable<Rider> GetRiders(string searchText = null)
-		{
-			var riders = new List<Rider>
-			{
-				new Rider("00001", "Jamie Carson", "Scotland", "imageurl", 22, "male"),
-				new Rider("00002", "Stefan Koch", "Germany", "imageurl", 38, "male"),
-				new Rider("00003", "Matt Falzon", "Australia", "imageurl", 26, "male"),
-				new Rider("00004", "Cam Barter", "Canada", "imageurl", 22, "male"),
-				new Rider("00005", "Jack Cropton", "Canada", "imageurl", 18, "male"),
-				new Rider("00006", "Ed White", "England", "imageurl", 22, "male")
-			};
-
-			if (String.IsNullOrWhiteSpace(searchText))
-				return riders;
-
-			return riders.Where(c => c.name.StartsWith(searchText));
-		}
-
-		private void initializeList()
-		{
-			Rider[] dummyData =
-			{
-				new Rider("00001", "Jamie Carson", "Scotland", "imageurl", 22, "male"),
-				new Rider("00002", "Stefan Koch", "Germany", "imageurl", 38, "male"),
-				new Rider("00003", "Matt Falzon", "Australia", "imageurl", 26, "male"),
-				new Rider("00004", "Cam Barter", "Canada", "imageurl", 22, "male"),
-				new Rider("00005", "Jack Cropton", "Canada", "imageurl", 18, "male"),
-				new Rider("00006", "Ed White", "England", "imageurl", 22, "male")
-			};
-
-			for (int i = 0; i < dummyData.Length; i++)
-			{
-				_riders.Add(dummyData[i]);
-			}
-            //raceList.ItemsSource = _riders;
-
-		}
 
 
 
 		void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
 		{
-           // raceList.ItemsSource = GetRiders(e.NewTextValue);
+           //raceList.ItemsSource = GetRiders(e.NewTextValue);
 		}
 
         async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
@@ -106,4 +78,6 @@ namespace Spokesman
 			await Navigation.PushAsync(new RiderDetailPage(rider));
         }
     }
+
+    //public class Rider
 }

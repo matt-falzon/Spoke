@@ -19,11 +19,11 @@ namespace Spokesman
 
             _riders = new ObservableCollection<Rider>();
 
-            initializeList();
+            //initializeList();
 
 
         }
-
+        /*
 		IEnumerable<Rider> GetRiders(string searchText = null)
 		{
 			var riders = new List<Rider>
@@ -62,7 +62,7 @@ namespace Spokesman
 			raceList.ItemsSource = _riders;
         }
 
-
+*/
 
         async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
         {
@@ -78,7 +78,7 @@ namespace Spokesman
 
         void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
-            raceList.ItemsSource = GetRiders(e.NewTextValue);
+            //raceList.ItemsSource = GetRiders(e.NewTextValue);
         }
     }
 }

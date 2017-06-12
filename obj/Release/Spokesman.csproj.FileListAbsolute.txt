@@ -55,3 +55,8 @@
 /Users/matt/Projects/Spokesman/Spokesman/bin/Release/XLabs.Platform.xml
 /Users/matt/Projects/Spokesman/Spokesman/bin/Release/XLabs.Serialization.xml
 /Users/matt/Projects/Spokesman/Spokesman/bin/Release/XLabs.Forms.xml
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.csproj.App.config
+/Users/matt/Projects/Spokesman/Spokesman/bin/Release/Spokesman.dll.config
+/Users/matt/Projects/Spokesman/Spokesman/bin/Release/CarouselView.FormsPlugin.Abstractions.dll
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.List.xaml.g.cs
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.ResultsListView.xaml.g.cs

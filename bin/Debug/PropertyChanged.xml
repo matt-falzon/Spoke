@@ -4,6 +4,14 @@
         <name>PropertyChanged</name>
     </assembly>
     <members>
+        <member name="T:PropertyChanged.AddINotifyPropertyChangedInterfaceAttribute">
+            <summary>
+            Specifies that the class will be marked with <see cref="T:System.ComponentModel.INotifyPropertyChanged"/>.
+            Note that all classes that implement <see cref="T:System.ComponentModel.INotifyPropertyChanged"/> will have property notification
+            injected irrespective of the use of this attribute.
+            Raising an issue about "this attribute does not behave as expected" will result in a RTFM and the issue being closed.
+            </summary>
+        </member>
         <member name="T:PropertyChanged.AlsoNotifyForAttribute">
             <summary>
             Injects this property to be notified when a dependent property is set.
@@ -70,11 +78,6 @@
             assembly. Matching is done by the Regex.IsMatch method using
             the Type.FullName as input for the Matching method.
             </param>
-        </member>
-        <member name="T:PropertyChanged.ImplementPropertyChangedAttribute">
-            <summary>
-            Obsolete
-            </summary>
         </member>
     </members>
 </doc>

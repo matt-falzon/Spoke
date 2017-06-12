@@ -58,3 +58,7 @@
 /Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.NotificationsPage.xaml.g.cs
 /Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.dll
 /Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.pdb
+/Users/matt/Projects/Spokesman/Spokesman/bin/Debug/Spokesman.dll.config
+/Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.csproj.App.config
+/Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.List.xaml.g.cs
+/Users/matt/Projects/Spokesman/Spokesman/obj/Debug/Spokesman.ResultsListView.xaml.g.cs

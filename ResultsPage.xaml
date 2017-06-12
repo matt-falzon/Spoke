@@ -8,6 +8,7 @@
     xmlns:local="clr-namespace:Spokesman"
     xmlns:controls="clr-namespace:CarouselViewControl.FormsPlugin.Abstractions;assembly=CarouselViewControl.FormsPlugin.Abstractions">
     <RelativeLayout x:Name="MainLayout">
+
         <BoxView Color="#DDDDDD" 
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.315}" 
@@ -44,7 +45,7 @@
             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.25}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Width, Factor=0.095}"/>
         
-        <forms:CarouselView x:Name="leagueCarousel" BackgroundColor="Aqua"
+        <forms:CarouselView x:Name="leagueCarousel" 
             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.65}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=X, Factor=1}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}" 
@@ -56,14 +57,14 @@
             </forms:CarouselView.ItemTemplate>
         </forms:CarouselView>
 
-        <forms:CarouselView x:Name="mainCarousel" BackgroundColor="Green"
+        <forms:CarouselView x:Name="mainCarousel" BackgroundColor="White"
             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=2.1}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=X, Factor=1}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}" 
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.68}" >
             <forms:CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Grid>
+                    <Grid x:Name="grid">
                         
                         <Grid.RowDefinitions>
                             <RowDefinition Height="0.15*"/>
@@ -72,24 +73,12 @@
                         
                         <StackLayout Grid.Row="0" Padding="2">
                             <Label Text="Date" FontSize="10" />
-                            <Label Text="{Binding .}" FontSize="22" />
+                            <Label x:Name="test" Text="{Binding .}" FontSize="22" />
                         </StackLayout>
                         
-                        <StackLayout Grid.Row="1" BackgroundColor="#F7F7F7" >
-                            <Label Text="Score board to go here" TextColor="Black" FontSize="16" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-                            <ListView x:Name="raceList">
-                                <ListView.ItemTemplate>
-                                    <DataTemplate>
-                                        <ViewCell>
-                                            <StackLayout HorizontalOptions="StartAndExpand"> 
-                                                <Label Text="Hello" />
-                                            </StackLayout>
-                                        </ViewCell>
-                                    </DataTemplate>
-                                </ListView.ItemTemplate>
-                            </ListView>
+                        <StackLayout Grid.Row="1" BackgroundColor="#F7F7F7" x:Name="stack">
+                            <local:ResultsListView/>
                         </StackLayout>
-                        
                     </Grid>
                 </DataTemplate>
             </forms:CarouselView.ItemTemplate>
