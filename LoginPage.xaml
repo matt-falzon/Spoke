@@ -4,11 +4,18 @@
     xmlns:viewModels="clr-namespace:FacebookLogin.ViewModels;assembly=FacebookLogin"
     x:Class="Spokesman.LoginPage"
     BackgroundColor="#32202E">
-  <StackLayout Orientation = "Vertical" Padding="0,130,0,0" >
-    <Image Source="spokesman_title.png" />
-    <StackLayout Padding="0,130,0,0">
+  <RelativeLayout  >
+    <Image Source="spokesman_title.png" 
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, ElementName=banner, Property=Width, Factor=0.05}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"/>
 
-            <Image Source="facebook_button.png" x:Name="btnLogin" />
-    </StackLayout>
-  </StackLayout>
+    <Image Source="facebook_button.png" x:Name="btnLogin" 
+        RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"
+        RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.3}"/>
+
+  </RelativeLayout>
 </ContentPage>

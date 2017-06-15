@@ -3,5 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Spokesman.GroupsPage"
     xmlns:local="clr-namespace:Spokesman">
-        <local:ResultsListView/>
+        <StackLayout>
+            <Label Text="Groups Page??" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
 </ContentPage>

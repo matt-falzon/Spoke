@@ -65,6 +65,12 @@
     <EmbeddedResource Include="ResultsListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="RaceSeriesMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaceCategoryMenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -112,6 +118,12 @@
       <DependentUpon>ResultsListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="CarouselView.cs" />
+    <Compile Include="RaceSeriesMenuPage.xaml.cs">
+      <DependentUpon>RaceSeriesMenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RaceCategoryMenuPage.xaml.cs">
+      <DependentUpon>RaceCategoryMenuPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FFImageLoading">

@@ -21,10 +21,22 @@ namespace Spokesman {
         private global::Xamarin.Forms.BoxView RaceSeriesBox;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Image raceSeriesDownArrow;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label raceSeriesTitle;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label raceSeriesLabel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.BoxView SortByBox;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Image sortByDownArrow;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Label sortByTitle;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.Label SortByLabel;
@@ -40,8 +52,12 @@ namespace Spokesman {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ResultsPage));
             MainLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.RelativeLayout>(this, "MainLayout");
             RaceSeriesBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.BoxView>(this, "RaceSeriesBox");
+            raceSeriesDownArrow = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Image>(this, "raceSeriesDownArrow");
+            raceSeriesTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "raceSeriesTitle");
             raceSeriesLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "raceSeriesLabel");
             SortByBox = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.BoxView>(this, "SortByBox");
+            sortByDownArrow = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Image>(this, "sortByDownArrow");
+            sortByTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "sortByTitle");
             SortByLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "SortByLabel");
             leagueCarousel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.CarouselView>(this, "leagueCarousel");
             carouselLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.StackLayout>(this, "carouselLayout");

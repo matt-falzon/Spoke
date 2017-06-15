@@ -8,7 +8,7 @@ using FFImageLoading.Forms;
 using Xamarin.Forms;
 namespace Spokesman
 {
-    public partial class ResultsListView : StackLayout
+    public partial class ResultsListView : ContentView
     {
         private ObservableCollection<Rider> _riders;
 

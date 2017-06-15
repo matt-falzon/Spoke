@@ -4,7 +4,11 @@
     x:Class="Spokesman.MainPage"
     xmlns:local="clr-namespace:Spokesman">
     <local:HomePage Title="Home" Icon="icon_wheel.gif"/>
-    <local:ResultsPage Title="Results" Icon="icon_wheel.gif"/>
+    <NavigationPage Title="Results" Icon="icon_wheel.gif">
+        <x:Arguments>
+            <local:ResultsPage />
+        </x:Arguments>
+    </NavigationPage>
     <local:GroupsPage Title="Groups" Icon="icon_wheel.gif"/>
     <NavigationPage Title="Notification" Icon="icon_wheel.gif">
         <x:Arguments>
