@@ -12,7 +12,7 @@
 
         <BoxView Color="#311F2D" 
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.315}" 
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.324}" 
             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.00}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.00}"
         />
@@ -59,23 +59,41 @@
         <Label x:Name="SortByLabel" Text="CATEGORY" TextColor="#FFFFFF" Font="Bold, 16"
             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.22}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Width, Factor=0.095}"/>
-        
-        <forms:CarouselView x:Name="leagueCarousel" 
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.53}"
+        <ScrollView Orientation="Horizontal" 
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.5}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=X, Factor=1}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}" 
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Height, Factor=0.8}" >
-            <forms:CarouselView.ItemTemplate>
-                <DataTemplate>
-                    <Label x:Name="lblLeague" Text="{Binding .}" FontSize="14" TextColor="#FFFFFF" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" />
-                </DataTemplate>
-            </forms:CarouselView.ItemTemplate>
-        </forms:CarouselView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Button x:Name="btnMaleOpen" Clicked="BtnMaleOpenClicked" Grid.Row="0" Grid.Column="0" Text="Male Open" TextColor="White" />
+                <Button x:Name="btnFemaleOpen" Clicked="BtnFemaleOpenClicked" Grid.Row="0" Grid.Column="1" Text="Female Open" TextColor="White" />
+                <Button x:Name="btnMasterMale" Clicked="BtnMasterMaleClicked" Grid.Row="0" Grid.Column="2" Text="Master Male" TextColor="White" />
+                <Button x:Name="btnMasterFemale" Clicked="BtnMasterFemaleClicked" Grid.Row="0" Grid.Column="3" Text="Master Female" TextColor="White" />
+                <Button x:Name="btnVetMale" Clicked="BtnVetMaleClicked" Grid.Row="0" Grid.Column="4" Text="Veteran Male" TextColor="White" />
+                <Button x:Name="btnJnrMale" Clicked="BtnJnrMaleClicked" Grid.Row="0" Grid.Column="5" Text="Junior Male" TextColor="White" />
+                <Button x:Name="btnGromMale" Clicked="BtnGromMaleClicked" Grid.Row="0" Grid.Column="6" Text="Male Grom" TextColor="White" />
+                <Button x:Name="btnJnrFemale" Clicked="BtnJnrFemaleClicked" Grid.Row="0" Grid.Column="7" Text="Junior Female" TextColor="White" />
+            </Grid>
+        </ScrollView>
+        
         <StackLayout  x:Name="carouselLayout" 
-            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.75}"
+            RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=Y, Factor=1.8}"
             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=SortByBox, Property=X, Factor=1}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}" 
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.68}" >
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.66}" >
             <local:CarouselPage HeightRequest="445" BackgroundColor="#F7F7F7"/>
         </StackLayout>
         <Frame BackgroundColor="#C69964" CornerRadius="15"

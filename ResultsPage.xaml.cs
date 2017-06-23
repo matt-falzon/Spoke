@@ -22,30 +22,12 @@ namespace Spokesman
 
 			InitializeComponent();
 
-			_riders = new ObservableCollection<Rider>();
+			//_riders = new ObservableCollection<Rider>();
 
 			//initializeList();
 
 
 			var seriesList = new List<String> { "Phat Wednesday 2016", "Phat Wednesday 2017" };
-
-			Picker raceSeriesPicker = new Picker
-			{
-				Title = "Race Series",
-				ItemsSource = seriesList
-			};
-
-			//tap recognizer for race series
-			var raceSeriesTapRecognizer = new TapGestureRecognizer();
-
-			raceSeriesTapRecognizer.Tapped += (s, e) =>
-			{
-				raceSeriesPicker.IsEnabled = true;
-				raceSeriesPicker.IsVisible = true;
-				raceSeriesPicker.Focus();
-			};
-			RaceSeriesBox.GestureRecognizers.Add(raceSeriesTapRecognizer);
-
 
 			var names = new List<String>
 			{
@@ -59,7 +41,7 @@ namespace Spokesman
 
 			//mainCarousel.ItemsSource = names;
 
-			leagueCarousel.ItemsSource = leagues;
+			//leagueCarousel.ItemsSource = leagues;
 
 			var raceSeriesTapGesture = new TapGestureRecognizer();
 			raceSeriesTapGesture.Tapped += (s, e) =>
@@ -91,9 +73,44 @@ namespace Spokesman
 			{
 				await Navigation.PushModalAsync(new RaceCategoryMenuPage());
 			}
+
 		}
 
-	}
+        void BtnMaleOpenClicked(object sender, System.EventArgs e)
+        {
+            DisplayAlert("Click", "Male Open", "SWEET!");
+        }
+		void BtnFemaleOpenClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Female Open", "SWEET!");
+		}
+		void BtnMasterMaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Master Male", "SWEET!");
+		}
+		void BtnMasterFemaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Master Female", "SWEET!");
+		}
+		void BtnVetMaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Veteran Male", "SWEET!");
+		}
+		void BtnJnrMaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Junior Male", "SWEET!");
+		}
+		void BtnGromMaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Grom Male", "SWEET!");
+		}
+		void BtnJnrFemaleClicked(object sender, System.EventArgs e)
+		{
+			DisplayAlert("Click", "Junior Female", "SWEET!");
+		}
+
+	
+    }
 
 	//public class Rider
 }

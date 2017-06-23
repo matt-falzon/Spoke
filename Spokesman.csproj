@@ -71,6 +71,12 @@
     <EmbeddedResource Include="RaceCategoryMenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="PolicyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoThanksPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -124,6 +130,17 @@
     <Compile Include="RaceCategoryMenuPage.xaml.cs">
       <DependentUpon>RaceCategoryMenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Result.cs" />
+    <Compile Include="Models\Stage.cs" />
+    <Compile Include="Models\Previous.cs" />
+    <Compile Include="Models\RootJSON.cs" />
+    <Compile Include="PolicyPage.xaml.cs">
+      <DependentUpon>PolicyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NoThanksPage.xaml.cs">
+      <DependentUpon>NoThanksPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FFImageLoading">
@@ -175,13 +192,16 @@
       <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
     </Reference>
     <Reference Include="CarouselView.FormsPlugin.Abstractions">
-      <HintPath>..\packages\CarouselView.FormsPlugin.4.2.9\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
+      <HintPath>..\packages\CarouselView.FormsPlugin.4.4.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+Xamarin.iOS10\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PropertyChanged">
-      <HintPath>..\packages\PropertyChanged.Fody.2.1.1\lib\netstandard1.0\PropertyChanged.dll</HintPath>
+      <HintPath>..\packages\PropertyChanged.Fody.2.1.2\lib\netstandard1.0\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="BottomBar.XamarinForms">
+      <HintPath>..\packages\ThriveGmbH.BottomNavigationBar.XF.1.0.2\lib\portable-net45+win8+wpa81\BottomBar.XamarinForms.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

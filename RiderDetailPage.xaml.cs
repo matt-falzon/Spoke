@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using Spokesman.Model;
+using Spokesman.Models;
 using Xamarin.Forms;
 
 namespace Spokesman
 {
     public partial class RiderDetailPage : ContentPage
     {
-        public RiderDetailPage(Rider rider)
+        public RiderDetailPage(Result res)
         {
             InitializeComponent();
 
@@ -15,7 +16,7 @@ namespace Spokesman
 			{
 				HorizontalOptions = LayoutOptions.Center,
 				VerticalOptions = LayoutOptions.Center,
-				Text = rider.name
+				Text = res.firstName
 			};
 
             Content = label;

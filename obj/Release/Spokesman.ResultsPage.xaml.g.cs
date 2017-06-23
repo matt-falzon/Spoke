@@ -42,7 +42,28 @@ namespace Spokesman {
         private global::Xamarin.Forms.Label SortByLabel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.CarouselView leagueCarousel;
+        private global::Xamarin.Forms.Button btnMaleOpen;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnFemaleOpen;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnMasterMale;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnMasterFemale;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnVetMale;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnJnrMale;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnGromMale;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button btnJnrFemale;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private global::Xamarin.Forms.StackLayout carouselLayout;
@@ -59,7 +80,14 @@ namespace Spokesman {
             sortByDownArrow = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Image>(this, "sortByDownArrow");
             sortByTitle = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "sortByTitle");
             SortByLabel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Label>(this, "SortByLabel");
-            leagueCarousel = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.CarouselView>(this, "leagueCarousel");
+            btnMaleOpen = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnMaleOpen");
+            btnFemaleOpen = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnFemaleOpen");
+            btnMasterMale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnMasterMale");
+            btnMasterFemale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnMasterFemale");
+            btnVetMale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnVetMale");
+            btnJnrMale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnJnrMale");
+            btnGromMale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnGromMale");
+            btnJnrFemale = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.Button>(this, "btnJnrFemale");
             carouselLayout = global::Xamarin.Forms.NameScopeExtensions.FindByName <global::Xamarin.Forms.StackLayout>(this, "carouselLayout");
         }
     }

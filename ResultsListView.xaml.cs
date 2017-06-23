@@ -63,12 +63,6 @@ namespace Spokesman
 
 
 
-        async void Handle_ItemTapped(object sender, Xamarin.Forms.ItemTappedEventArgs e)
-        {
-            var rider = e.Item as Rider;
-
-            await Navigation.PushAsync(new RiderDetailPage(rider));
-        }
 
         void Handle_Refreshing(object sender, System.EventArgs e)
         {

@@ -61,3 +61,6 @@
 /Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.RaceSeriesMenuPage.xaml.g.cs
 /Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.RaceCategoryMenuPage.xaml.g.cs
 /Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.dll
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.csprojResolveAssemblyReference.cache
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.PolicyPage.xaml.g.cs
+/Users/matt/Projects/Spokesman/Spokesman/obj/Release/Spokesman.NoThanksPage.xaml.g.cs
