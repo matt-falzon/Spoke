@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Spokesman
 {
-    public partial class HomePage : ContentPage
+    public partial class HomePage 
     {
         private FacebookProfile _profile;  
 

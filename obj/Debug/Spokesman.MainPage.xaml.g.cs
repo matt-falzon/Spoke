@@ -12,7 +12,7 @@ namespace Spokesman {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("/Users/matt/Projects/Spokesman/Spokesman/MainPage.xaml")]
-    public partial class MainPage : global::Xamarin.Forms.TabbedPage {
+    public partial class MainPage : global::BottomBar.XamarinForms.BottomBarPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {

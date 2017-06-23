@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<bottomBar:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="Spokesman.MainPage"
+    xmlns:bottomBar="clr-namespace:BottomBar.XamarinForms;assembly=BottomBar.XamarinForms"
     xmlns:local="clr-namespace:Spokesman">
-    <local:HomePage Title="Home" />
-    <NavigationPage Title="Results" >
+
+    <local:HomePage Title="Home" Icon="icon_wheel.gif" bottomBar:BottomBarPageExtensions.TabColor="#5D4037" />
+
+    <NavigationPage Title="Results" Icon="icon_wheel.gif" bottomBar:BottomBarPageExtensions.TabColor="#7B1FA2" >
         <x:Arguments>
             <local:ResultsPage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Policy"  >
+    <NavigationPage Title="Policy" Icon="icon_wheel.gif" bottomBar:BottomBarPageExtensions.TabColor="#FF5252">
         <x:Arguments>
             <local:PolicyPage />
         </x:Arguments>
     </NavigationPage>
-    <NavigationPage Title="Notification">
+    <NavigationPage Title="Notification" Icon="icon_wheel.gif" bottomBar:BottomBarPageExtensions.TabColor="#FF9800">
         <x:Arguments>
             <local:NotificationsPage />
         </x:Arguments>
     </NavigationPage>
-</TabbedPage>
+   
+</bottomBar:BottomBarPage>
